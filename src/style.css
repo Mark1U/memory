@@ -150,8 +150,18 @@ button:focus-visible {
 }
 
 .front {
-  background: linear-gradient(121deg, #f0a0a0 0%, rgb(46 85 195) 100%);
+  /* background: linear-gradient(121deg, #f0a0a0 0%, rgb(46 85 195) 100%); */
+
+  background-image: linear-gradient(
+    136deg,
+    #ff52d9 4%,
+    color-mix(in oklch, #ff52d9, #ff5861) 22%,
+    #7480ff 45%,
+    color-mix(in oklch, #7480ff, #00cdb8) 67%,
+    #00cdb8 100.2%
+  );
 }
+
 .back {
   background-color: white;
   display: flex;
@@ -167,4 +177,45 @@ button:focus-visible {
 .reveal .back p {
   display: block;
   z-index: 10;
+}
+
+.overlay-container {
+  /* position: relative;*/
+  width: fit-content;
+  display: inline-block;
+  height: 74px;
+}
+
+#h1Bottom {
+  --tw-blur: blur(15px);
+  filter: var(--tw-blur);
+}
+
+#h1Top,
+#h1Bottom {
+  position: absolute;
+  height: 75px;
+  margin-top: 16px;
+  top: 0;
+  transform: translateX(-50%);
+  font-weight: 900;
+  -webkit-text-fill-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+  border-bottom-color: rgb(229, 231, 235);
+  border-bottom-style: solid border-bottom-width 0px;
+  border-left-color: rgb(229, 231, 235);
+  border-left-style: solid border-left-width 0px;
+  border-right-color: rgb(229, 231, 235);
+  border-right-style: solid border-right-width 0px;
+  border-top-color: rgb(229, 231, 235);
+  border-top-style: solid border-top-width 0px box-sizing border-box;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #ff52d9 4%,
+    color-mix(in oklch, #ff52d9, #ff5861) 22%,
+    #7480ff 45%,
+    color-mix(in oklch, #7480ff, #00cdb8) 67%,
+    #00cdb8 100.2%
+  );
 }
