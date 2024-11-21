@@ -123,23 +123,48 @@ button:focus-visible {
 .card {
   height: 60px;
   width: 60px;
-  background-color: darkblue;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 2px;
   cursor: pointer;
+  transform-style: preserve-3d;
+  transition: all 0.25s ease-in-out;
+
+  /* box-shadow: 0px 2px 4px gray; */
 }
 
-.card p {
+.card .back p {
   font-size: 96px;
-  display: none;
+  /* display: none; */
+}
+
+.back,
+.front {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.front {
+  background-color: darkblue;
+}
+.back {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
 }
 
 .reveal {
-  background-color: white;
+  transform: perspective(400px) rotateY(180deg);
   cursor: default;
 }
-.reveal p {
+.reveal .back p {
   display: block;
+  z-index: 10;
 }

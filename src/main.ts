@@ -56,7 +56,10 @@ function reset() {
 for (let i = 0; i < 6 * 4; i++) {
   const card = document.createElement('div')
   card.className = "card"
-  card.innerHTML = `<p>${popularEmojis[memoryArr[i]]}</p>`;
+  card.innerHTML = `<div class="front"></div>
+  <div class="back">
+  <p>${popularEmojis[memoryArr[i]]}</p>
+  </div>`;
 
   card.addEventListener('click', () => {
 
@@ -81,7 +84,7 @@ for (let i = 0; i < 6 * 4; i++) {
           pairsGuessed!.textContent = "Pairs Guessed: " + pairsGuessedCounter
           firstCard = -1;
           secondCard = -1;
-          if (pairsGuessedCounter == 2) {
+          if (pairsGuessedCounter == 1) {
             isBlocked = true;
             clearInterval(intervalId);
             intervalId = undefined;
