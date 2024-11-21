@@ -43,7 +43,10 @@ function reset() {
   memoryArr = memoryArr.sort(() => 0.5 - Math.random())
   for (let i = 0; i < gameField!.children.length; i++) {
     gameField!.children[i].classList.remove('reveal')
-    gameField!.children[i].innerHTML = `<p>${popularEmojis[memoryArr[i]]}</p>`;
+    gameField!.children[i].innerHTML = `<div class="front"></div>
+  <div class="back">
+  <p>${popularEmojis[memoryArr[i]]}</p>
+  </div>`;
   }
   timerCount = 0;
   timer!.textContent = "";
@@ -84,7 +87,7 @@ for (let i = 0; i < 6 * 4; i++) {
           pairsGuessed!.textContent = "Pairs Guessed: " + pairsGuessedCounter
           firstCard = -1;
           secondCard = -1;
-          if (pairsGuessedCounter == 1) {
+          if (pairsGuessedCounter == 12) {
             isBlocked = true;
             clearInterval(intervalId);
             intervalId = undefined;

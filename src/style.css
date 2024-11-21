@@ -126,7 +126,6 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 2px;
   cursor: pointer;
   transform-style: preserve-3d;
   transition: all 0.25s ease-in-out;
@@ -147,10 +146,11 @@ button:focus-visible {
   left: 0;
   height: 100%;
   width: 100%;
+  border-radius: 5px;
 }
 
 .front {
-  background-color: darkblue;
+  background: linear-gradient(121deg, #f0a0a0 0%, rgb(46 85 195) 100%);
 }
 .back {
   background-color: white;
