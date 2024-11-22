@@ -150,16 +150,7 @@ button:focus-visible {
 }
 
 .front {
-  /* background: linear-gradient(121deg, #f0a0a0 0%, rgb(46 85 195) 100%); */
-
-  background-image: linear-gradient(
-    136deg,
-    #ff52d9 4%,
-    color-mix(in oklch, #ff52d9, #ff5861) 22%,
-    #7480ff 45%,
-    color-mix(in oklch, #7480ff, #00cdb8) 67%,
-    #00cdb8 100.2%
-  );
+  background: linear-gradient(121deg, #ff58612e 0%, rgb(46 85 195) 100%);
 }
 
 .back {
