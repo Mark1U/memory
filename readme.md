@@ -5,7 +5,9 @@
 Dies ist ein einfaches Memory-Spiel, bei dem Karten umgedreht werden, um übereinstimmende Paare zu finden.
 Das Spiel ist mit HTML, CSS und TypeScript entwickelt.
 
-Hier kannst du es direkt ausprobieren ohne etwas herunterladen zu müssen: https://my-emoji-memory-game.netlify.app/
+Hier kannst du es direkt ausprobieren ohne etwas herunterladen zu müssen: 
+
+https://my-emoji-memory-game.netlify.app/
 
 ![Screenshot des Spiels](public/screenshot.png)
 
